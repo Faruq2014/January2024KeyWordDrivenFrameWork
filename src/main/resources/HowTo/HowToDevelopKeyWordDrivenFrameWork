@@ -1,0 +1,37 @@
+
+		why should I develop Key Word Driven frame work?
+			 1. Few sensetive data to deal with
+			 2. data are key and values pair
+			 3. most of the case: you can not put values in the class file
+			    because if you write on class file
+			          it is tough to change values in the production
+			               you must comple and push-- as a result server has to stop for hours
+			   because if you write on properties file 
+			        only refresh is enough-- server did not have to stop
+			        
+			        
+		what is your Key Word Driven Frame work contains/ how to build Key Word Driven Frame work
+		can you explain key word driven frame work?
+		
+		     1. propertise file such as application.propertise
+		               package= utlities
+		                Class=  PropertiseReader 
+		     2. package= base-------> is a relationship---inheritance
+		         class= BaseTest
+		     3. Page Object Model with Page Factory---->has a relationship---class refferencial 
+		          a. page side
+		            package=   pages
+		              class =LoginPage, RegistrationPage
+		          b. test side
+		            package=   tests
+		              class =loginTest
+		       4. Build TestNg.xml file appropriately
+		             such as smoke, regression and so on
+		             and design with group, listeners
+		       5. build sure fire plugin for maven run
+		             so you can run it from remote/Jenkins
+		       6. Reporting 
+		           a. build with i test listener for index.html reporting
+		           b. you can use third party tool
+		                 such Extent Report
+           

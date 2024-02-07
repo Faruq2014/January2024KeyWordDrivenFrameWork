@@ -1,0 +1,20 @@
+  
+  Step 1  to test Java
+     build package in the src/main
+     build a class
+     run as Java application
+     
+     Step 2  to test TestNG and Selenium
+     build package in the src/test
+     build a class
+     build a @Test
+     build a method
+     run as TestNg test
+     
+     
+   Step 3  to test testng.xml
+     convert to testNg xml file
+     run as testNg suites
+     
+      Step 4  to test maven
+        run as maven test
