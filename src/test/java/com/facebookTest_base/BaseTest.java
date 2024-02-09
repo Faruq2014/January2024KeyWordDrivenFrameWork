@@ -9,14 +9,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.facebookTest_utilities.PropertiseReader;
+
 public class BaseTest {
 
 	public WebDriver driver;
-	public String browser = "chrome";// instance method and it is a flag
+	//public String browser = "chrome";// instance method and it is a flag
 
 	@BeforeMethod
 	public void openApplication() {
-
+		PropertiseReader pr= new PropertiseReader();
+		String browser=pr.readBrowser();
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
@@ -27,8 +30,8 @@ public class BaseTest {
 			System.out.println("<<<<< Hello please use chrome or edge or firefox>>>>");
 			driver = new ChromeDriver();
 		}
-
-		driver.get("https://www.facebook.com/");
+		
+		driver.get(pr.readUrl());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
