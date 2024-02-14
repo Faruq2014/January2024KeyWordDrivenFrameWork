@@ -1,0 +1,11 @@
+  what is interface
+  what is ITestListener
+  what is onStart
+  what is onFinish
+  How do you design xml file for listeners
+     <listeners>
+         <listener class-name="com.facebookTest_listeners.FacebookListener"></listener>
+     </listeners>
+     
+          com.facebookTest_listeners== package name
+          .FacebookListener== class name

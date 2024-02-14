@@ -1,5 +1,6 @@
 package com.facebookTests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.facebookPages.LoginPage;
@@ -24,7 +25,15 @@ public class LoginTest extends BaseTest{
 		lp.userName("hello");
 		lp.password("jk");
 		lp.loginButton();
+		String expectedTitle=driver.getTitle();
+		String actualTitle="facebook";
+		Assert.assertEquals(expectedTitle, actualTitle);
 		
+	}
+	
+	@Test(dependsOnMethods="inValidLoginTest")
+	public void invalidUserName() {
+		System.out.println("skipped test");
 	}
 	
 
