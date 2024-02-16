@@ -17,7 +17,7 @@ public class BaseTest {
 	//public String browser = "chrome";// instance method and it is a flag
 
 	@BeforeMethod
-	public void openApplication() {
+	public WebDriver openApplication() {
 		PropertiseReader pr= new PropertiseReader();
 		String browser=pr.readBrowser();
 		if (browser.equalsIgnoreCase("chrome")) {
@@ -34,6 +34,7 @@ public class BaseTest {
 		driver.get(pr.readUrl());
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		return driver;
 
 	}
 

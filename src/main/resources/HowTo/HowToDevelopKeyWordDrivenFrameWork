@@ -34,4 +34,7 @@
 		           a. build with i test listener for index.html reporting
 		           b. you can use third party tool
 		                 such Extent Report
+		       7. take screen shot
+		             a. build a package and a class for screen shot
+		             b. call the screen shot method in the ITestListener class as necessary
            
